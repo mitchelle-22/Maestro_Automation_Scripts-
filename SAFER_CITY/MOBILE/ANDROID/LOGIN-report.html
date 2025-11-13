@@ -1,0 +1,247 @@
+<html>
+  <head>
+    <title>Maestro Test Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="mt-5 text-center">Flow Execution Summary</h1>
+<br>Test Result: FAILED<br>Duration: 0s<br><br>
+        <div class="card-group mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Total number of Flows</h5>
+              <h3 class="card-text text-center">3</h3>
+            </div>
+          </div>
+          <div class="card text-white bg-danger">
+            <div class="card-body">
+              <h5 class="card-title text-center">Failed Flows</h5>
+              <h3 class="card-text text-center">3</h3>
+            </div>
+          </div>
+          <div class="card text-white bg-success">
+            <div class="card-body">
+              <h5 class="card-title text-center">Successful Flows</h5>
+              <h3 class="card-text text-center">0</h3>
+            </div>
+          </div>
+        </div>
+        <div class="card border-danger mb-3">
+          <div class="card-body text-danger"><b>Failed Flow</b><br>
+            <p class="card-text">LoginWithInternationalNum<br>LoginWithEmail<br>LoginWithNumber<br></p>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0"><button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#LoginWithInternationalNum" aria-expanded="false" aria-controls="LoginWithInternationalNum">LoginWithInternationalNum : ERROR</button></h5>
+          </div>
+          <div class="collapse" id="LoginWithInternationalNum">
+            <div class="card-body">
+              <p class="card-text">Status: ERROR<br>Duration: 0s<br>File Name: LoginWithInternationalNum</p>
+              <p class="card-text text-danger">io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:275)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:256)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:169)
+	at maestro_android.MaestroDriverGrpc$MaestroDriverBlockingStub.deviceInfo(MaestroDriverGrpc.java:740)
+	at maestro.drivers.AndroidDriver$deviceInfo$1.invoke(AndroidDriver.kt:216)
+	at maestro.drivers.AndroidDriver$deviceInfo$1.invoke(AndroidDriver.kt:215)
+	at maestro.drivers.AndroidDriver.runDeviceCall(AndroidDriver.kt:1235)
+	at maestro.drivers.AndroidDriver.deviceInfo(AndroidDriver.kt:215)
+	at maestro.Maestro$cachedDeviceInfo$2.invoke(Maestro.kt:47)
+	at maestro.Maestro$cachedDeviceInfo$2.invoke(Maestro.kt:45)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at maestro.Maestro.getCachedDeviceInfo(Maestro.kt:45)
+	at maestro.orchestra.Orchestra.initJsEngine(Orchestra.kt:294)
+	at maestro.orchestra.Orchestra.runFlow(Orchestra.kt:153)
+	at maestro.cli.runner.TestSuiteInteractor.runFlow(TestSuiteInteractor.kt:237)
+	at maestro.cli.runner.TestSuiteInteractor.runTestSuite(TestSuiteInteractor.kt:95)
+	at maestro.cli.command.TestCommand.runMultipleFlows(TestCommand.kt:437)
+	at maestro.cli.command.TestCommand.access$runMultipleFlows(TestCommand.kt:65)
+	at maestro.cli.command.TestCommand$runShardSuite$1$1.invokeSuspend(TestCommand.kt:367)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at maestro.cli.command.TestCommand$runShardSuite$1.invoke(TestCommand.kt:366)
+	at maestro.cli.command.TestCommand$runShardSuite$1.invoke(TestCommand.kt:342)
+	at maestro.cli.session.MaestroSessionManager.newSession(MaestroSessionManager.kt:129)
+	at maestro.cli.session.MaestroSessionManager.newSession$default(MaestroSessionManager.kt:65)
+	at maestro.cli.command.TestCommand.runShardSuite(TestCommand.kt:342)
+	at maestro.cli.command.TestCommand.access$runShardSuite(TestCommand.kt:65)
+	at maestro.cli.command.TestCommand$handleSessions$1$results$1$1.invokeSuspend(TestCommand.kt:308)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:111)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:585)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:802)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:706)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:693)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7001
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1046)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</p>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0"><button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#LoginWithEmail" aria-expanded="false" aria-controls="LoginWithEmail">LoginWithEmail : ERROR</button></h5>
+          </div>
+          <div class="collapse" id="LoginWithEmail">
+            <div class="card-body">
+              <p class="card-text">Status: ERROR<br>Duration: 0s<br>File Name: LoginWithEmail</p>
+              <p class="card-text text-danger">io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:275)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:256)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:169)
+	at maestro_android.MaestroDriverGrpc$MaestroDriverBlockingStub.deviceInfo(MaestroDriverGrpc.java:740)
+	at maestro.drivers.AndroidDriver$deviceInfo$1.invoke(AndroidDriver.kt:216)
+	at maestro.drivers.AndroidDriver$deviceInfo$1.invoke(AndroidDriver.kt:215)
+	at maestro.drivers.AndroidDriver.runDeviceCall(AndroidDriver.kt:1235)
+	at maestro.drivers.AndroidDriver.deviceInfo(AndroidDriver.kt:215)
+	at maestro.Maestro$cachedDeviceInfo$2.invoke(Maestro.kt:47)
+	at maestro.Maestro$cachedDeviceInfo$2.invoke(Maestro.kt:45)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at maestro.Maestro.getCachedDeviceInfo(Maestro.kt:45)
+	at maestro.orchestra.Orchestra.initJsEngine(Orchestra.kt:294)
+	at maestro.orchestra.Orchestra.runFlow(Orchestra.kt:153)
+	at maestro.cli.runner.TestSuiteInteractor.runFlow(TestSuiteInteractor.kt:237)
+	at maestro.cli.runner.TestSuiteInteractor.runTestSuite(TestSuiteInteractor.kt:95)
+	at maestro.cli.command.TestCommand.runMultipleFlows(TestCommand.kt:437)
+	at maestro.cli.command.TestCommand.access$runMultipleFlows(TestCommand.kt:65)
+	at maestro.cli.command.TestCommand$runShardSuite$1$1.invokeSuspend(TestCommand.kt:367)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at maestro.cli.command.TestCommand$runShardSuite$1.invoke(TestCommand.kt:366)
+	at maestro.cli.command.TestCommand$runShardSuite$1.invoke(TestCommand.kt:342)
+	at maestro.cli.session.MaestroSessionManager.newSession(MaestroSessionManager.kt:129)
+	at maestro.cli.session.MaestroSessionManager.newSession$default(MaestroSessionManager.kt:65)
+	at maestro.cli.command.TestCommand.runShardSuite(TestCommand.kt:342)
+	at maestro.cli.command.TestCommand.access$runShardSuite(TestCommand.kt:65)
+	at maestro.cli.command.TestCommand$handleSessions$1$results$1$1.invokeSuspend(TestCommand.kt:308)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:111)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:585)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:802)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:706)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:693)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7001
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1046)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</p>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0"><button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#LoginWithNumber" aria-expanded="false" aria-controls="LoginWithNumber">LoginWithNumber : ERROR</button></h5>
+          </div>
+          <div class="collapse" id="LoginWithNumber">
+            <div class="card-body">
+              <p class="card-text">Status: ERROR<br>Duration: 0s<br>File Name: LoginWithNumber</p>
+              <p class="card-text text-danger">io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:275)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:256)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:169)
+	at maestro_android.MaestroDriverGrpc$MaestroDriverBlockingStub.deviceInfo(MaestroDriverGrpc.java:740)
+	at maestro.drivers.AndroidDriver$deviceInfo$1.invoke(AndroidDriver.kt:216)
+	at maestro.drivers.AndroidDriver$deviceInfo$1.invoke(AndroidDriver.kt:215)
+	at maestro.drivers.AndroidDriver.runDeviceCall(AndroidDriver.kt:1235)
+	at maestro.drivers.AndroidDriver.deviceInfo(AndroidDriver.kt:215)
+	at maestro.Maestro$cachedDeviceInfo$2.invoke(Maestro.kt:47)
+	at maestro.Maestro$cachedDeviceInfo$2.invoke(Maestro.kt:45)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at maestro.Maestro.getCachedDeviceInfo(Maestro.kt:45)
+	at maestro.orchestra.Orchestra.initJsEngine(Orchestra.kt:294)
+	at maestro.orchestra.Orchestra.runFlow(Orchestra.kt:153)
+	at maestro.cli.runner.TestSuiteInteractor.runFlow(TestSuiteInteractor.kt:237)
+	at maestro.cli.runner.TestSuiteInteractor.runTestSuite(TestSuiteInteractor.kt:95)
+	at maestro.cli.command.TestCommand.runMultipleFlows(TestCommand.kt:437)
+	at maestro.cli.command.TestCommand.access$runMultipleFlows(TestCommand.kt:65)
+	at maestro.cli.command.TestCommand$runShardSuite$1$1.invokeSuspend(TestCommand.kt:367)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at maestro.cli.command.TestCommand$runShardSuite$1.invoke(TestCommand.kt:366)
+	at maestro.cli.command.TestCommand$runShardSuite$1.invoke(TestCommand.kt:342)
+	at maestro.cli.session.MaestroSessionManager.newSession(MaestroSessionManager.kt:129)
+	at maestro.cli.session.MaestroSessionManager.newSession$default(MaestroSessionManager.kt:65)
+	at maestro.cli.command.TestCommand.runShardSuite(TestCommand.kt:342)
+	at maestro.cli.command.TestCommand.access$runShardSuite(TestCommand.kt:65)
+	at maestro.cli.command.TestCommand$handleSessions$1$results$1$1.invokeSuspend(TestCommand.kt:308)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:111)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:585)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:802)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:706)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:693)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7001
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1046)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    </div>
+  </body>
+</html>

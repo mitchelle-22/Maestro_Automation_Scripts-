@@ -1,0 +1,38 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- assertVisible: First Name
+- tapOn: First Name
+- eraseText #
+- inputText: Hello
+- assertVisible: Last Name
+- tapOn: Last Name
+- eraseText #
+- inputText: World
+- assertVisible: Email
+- tapOn: Email
+- inputText: mitchelle+3@bridgelabs.design
+- assertVisible: Gender 
+- tapOn: Gender 
+- assertVisible: Select Gender Male Female Won't specify
+- assertVisible: Female
+- tapOn: Female
+- assertVisible: Select date of birth 
+- tapOn: Select date of birth 
+- tapOn: Select date of birth 
+- assertVisible: 16 15 14 13 Horizontal scroll bar, 1 page 19 18 17 16 Horizontal scroll bar, 1 page 17 16 15 Horizontal scroll bar, 1 page October September August July Horizontal scroll bar, 1 page January December November October Horizontal scroll bar, 1 page November October September Horizontal scroll bar, 1 page 2025 2024 2023 2022 Horizontal scroll bar, 1 page 2028 2027 2026 2025 Horizontal scroll bar, 1 page 2026 2025 2024 Horizontal scroll bar, 1 page Ok
+- assertVisible: 16
+- tapOn: 16
+- assertVisible: February
+- tapOn: February
+- assertVisible: 2000
+- tapOn: 2000
+- assertVisible: Ok
+- tapOn: Ok
+- tapOn: Ok
+- assertVisible: Password
+- tapOn: Password
+- inputText: Hello@World1
+- scroll
+- assertVisible: Get Started
+- tapOn: Get Started
+- tapOn: Get Started

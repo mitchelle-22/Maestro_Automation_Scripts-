@@ -1,0 +1,30 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- launchApp:
+    clearState: true
+
+- tapOn: http://10.0.2.2:8081
+
+- assertVisible: 'Runtime version: exposdk:52.0.0'
+
+- tapOn:
+    point: 92%,42%
+
+- assertVisible: Login
+
+- longPressOn: Login
+
+- assertVisible: , Phone Number
+- tapOn: , Phone Number
+- inputText: 720661687
+- assertVisible:
+    id: passwordInput
+- tapOn: Password
+- inputText: Michelle@1234
+- assertVisible:
+    id: loginBtn
+- tapOn:
+    id: loginBtn
+- tapOn:
+    id: loginBtn
+

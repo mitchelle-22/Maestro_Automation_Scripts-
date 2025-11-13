@@ -1,0 +1,67 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- launchApp:
+    clearState: true
+
+- tapOn: http://10.0.2.2:8081
+
+- assertVisible: 'Runtime version: exposdk:52.0.0'
+
+- tapOn:
+    point: 92%,42%
+
+- assertVisible: Sign Up
+
+- longPressOn: Sign Up
+
+- assertVisible: , Phone Number
+- tapOn: , Phone Number
+
+- assertVisible: Countries button
+- tapOn: Countries button
+
+- assertVisible: Search country...
+- tapOn: Search country...
+
+# Allow manual input
+- inputText: 'United Kingdom' # Prompt for manual input
+
+# Wait for user to input the country name
+# - extendedWaitUntil:
+#     visible: 'Country Select Search Input' # Wait until the input field is visible again
+#     timeout: 10000 # Adjust timeout as needed
+
+# Verify the input
+- assertVisible: 'United Kingdom' # Check if the input matches the expected country name
+
+# Continue with the script if the assertion passes
+- tapOn: Country Select Item
+- tapOn: Country Select Item
+
+- assertVisible: Enter phone number
+- tapOn: Enter phone number
+- inputText: '7706218252'
+
+- assertVisible:
+    text: Sign Up
+    index: 1
+- tapOn:
+    text: Sign Up
+    index: 1
+- tapOn:
+    text: Sign Up
+    index: 1
+# # Verification screen (OTP)
+# - assertVisible: Sign Up
+# - assertVisible: Please enter the verification code sent to your phone number.
+
+# - extendedWaitUntil:
+#     visible: 'Verify' # Replace with the actual identifier for the OTP input field
+#     timeout: 60000 #
+
+# - assertVisible:
+#     id: verifyOTPBtn
+# - tapOn:
+#     id: verifyOTPBtn
+
+# No OTP received

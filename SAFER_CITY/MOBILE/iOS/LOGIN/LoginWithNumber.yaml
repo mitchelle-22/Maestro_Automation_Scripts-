@@ -1,0 +1,28 @@
+appId: cert.com.safercity.safercitymobileapp.dev
+---
+- launchApp:
+    clearState: true
+
+- tapOn: http://localhost:8081
+
+- assertVisible: 'Safer City (Dev) Runtime version: exposdk:52.0.0'
+- tapOn:
+    point: 92%,42%
+
+- longPressOn: Login
+
+- assertVisible:  Phone Number
+- tapOn:  Phone Number
+- inputText: 720661687
+- assertVisible:
+    id: passwordInput
+- tapOn: Password
+- inputText: Michelle@1234
+- assertVisible:
+    id: loginBtn
+- tapOn:
+    id: loginBtn
+- tapOn:
+    id: loginBtn
+- takeScreenshot:
+    path: .maestro/screenshorts

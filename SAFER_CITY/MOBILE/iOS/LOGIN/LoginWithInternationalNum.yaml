@@ -1,0 +1,38 @@
+appId: cert.com.safercity.safercitymobileapp.dev
+---
+- launchApp:
+    clearState: true
+
+- tapOn: http://localhost:8081
+
+- assertVisible: 'Safer City (Dev) Runtime version: exposdk:52.0.0'
+- tapOn:
+    point: 92%,42%
+
+- longPressOn: Login
+
+- assertVisible:  Phone Number
+- tapOn:  Phone Number
+
+- assertVisible: 🇿🇦
+- tapOn: 🇿🇦
+
+- assertVisible: Enter country name
+- tapOn: Enter country name
+- eraseText #
+- inputText: United Kingdom
+- assertVisible: 🇬🇧 United Kingdom (+44)
+- tapOn: 🇬🇧 United Kingdom (+44)
+- tapOn: 🇬🇧 United Kingdom (+44)
+- assertVisible: Phone Number
+- tapOn: Phone Number
+- inputText: '7367211583'
+- assertVisible: Password
+- tapOn: Password
+- inputText: Hello@World123
+- assertVisible:
+    id: loginBtn
+- tapOn:
+    id: loginBtn
+- tapOn:
+    id: loginBtn

@@ -1,0 +1,63 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- assertVisible: Profile, tab, 5 of 5
+- tapOn: Profile, tab, 5 of 5
+- assertVisible: Panic Information 
+- tapOn: Panic Information 
+
+- assertVisible: ID Number
+- tapOn: ID Number
+- eraseText #
+- inputText: 9702010201086
+- assertVisible: Street Name
+- tapOn: Street Name
+- eraseText #
+- inputText: 3 Alice Lane
+
+- assertVisible: Suburb
+- tapOn: Suburb
+- eraseText #
+- inputText: Sandton
+
+- assertVisible: Area eg. Centurion
+- tapOn: Area eg. Centurion
+- eraseText #
+- inputText: Sandton
+
+- assertVisible: Select a province
+- tapOn: Select a province
+- assertVisible: Search for a province
+- tapOn: Search for a province
+- eraseText #
+- inputText: Gauteng
+- assertVisible:
+    text: Gauteng
+    index: 1
+- tapOn:
+    text: Gauteng
+    index: 1
+- tapOn:
+    text: Gauteng
+    index: 1
+
+- assertVisible: Area Code/Postal Code
+- tapOn: Area Code/Postal Code
+- eraseText #
+- inputText: '0123'
+- scroll
+
+- extendedWaitUntil:
+    visible: 'Safeword' # Replace with the actual identifier for the OTP input field
+    timeout: 60000 #
+
+# - assertVisible: Safeword
+# - assertVisible: We will call you to confirm you are safe. If you are in need of response give a fake safeword or not at all. We will send a vehicle If you are safe give us the word and we will cancel response.
+
+- assertVisible: 'E.g: Lemon cake'
+- tapOn: 'E.g: Lemon cake'
+- inputText: My Text
+
+- assertVisible: Next
+- tapOn: Next
+- tapOn: Next
+- tapOn: Next

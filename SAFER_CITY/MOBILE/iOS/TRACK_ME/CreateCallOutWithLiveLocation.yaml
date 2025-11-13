@@ -1,0 +1,10 @@
+appId: cert.com.safercity.safercitymobileapp.dev
+---
+- assertVisible: Track me
+- tapOn: Track me
+- scroll
+- assertVisible: Family Group Family Plan Avatar Avatar 2 Members
+- tapOn: Family Group Family Plan Avatar Avatar 2 Members
+
+
+# Call Out bottom sheet

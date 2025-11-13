@@ -1,0 +1,12 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- assertVisible: Profile, tab, 5 of 5
+- tapOn: Profile, tab, 5 of 5
+- assertVisible: Subscription 
+- tapOn: Subscription 
+
+- assertVisible: Subscribe R35.99
+- tapOn: Subscribe R35.99
+
+- assertVisible: Join
+- tapOn: Join

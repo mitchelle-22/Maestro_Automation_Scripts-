@@ -1,0 +1,42 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- launchApp:
+    clearState: true
+
+- tapOn: http://10.0.2.2:8081
+
+- assertVisible: 'Runtime version: exposdk:52.0.0'
+
+- tapOn:
+    point: 92%,42%
+
+- assertVisible: Sign Up
+
+- longPressOn: Sign Up
+
+- assertVisible: Enter phone number
+- tapOn: Enter phone number
+- inputText: 813863122
+- assertVisible:
+    id: signUpBtn
+- tapOn:
+    id: signUpBtn
+
+- tapOn:
+    id: signUpBtn
+# Verification Code (OTP)
+
+# - extendedWaitUntil:
+#     visible:
+#       text: 'Verify'
+#     timeout: 15000
+
+# - tapOn:
+#     point: 10%,53%
+
+# - assertVisible:
+#     id: verifyOTPBtn
+# - tapOn:
+#     id: verifyOTPBtn
+
+# No OTP Received

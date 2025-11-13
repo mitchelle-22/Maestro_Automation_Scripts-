@@ -1,0 +1,30 @@
+appId: cert.com.safercity.safercitymobileapp.dev
+---
+- assertVisible: Profile, tab, 5 of 5
+- tapOn: Profile, tab, 5 of 5
+- assertVisible: Change Password 
+- tapOn: Change Password 
+- assertVisible: Enter your current password 
+- tapOn: Enter your current password
+- eraseText #
+- inputText: Hello@World123
+- assertVisible: Enter your new password
+- tapOn: Enter your new password
+- eraseText #
+- inputText: Hello@World1234
+- assertVisible: Confirm your new password
+- tapOn: Confirm your new password
+- eraseText #
+- inputText: Hello@World1234
+
+- assertVisible: Enter your new password
+- tapOn: Enter your new password
+
+- assertVisible:
+    id: resetPasswordBtn
+
+- tapOn:
+    id: resetPasswordBtn
+
+- tapOn:
+    id: resetPasswordBtn

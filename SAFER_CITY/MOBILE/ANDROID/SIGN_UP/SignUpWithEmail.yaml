@@ -1,0 +1,43 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- launchApp:
+    clearState: true
+
+- tapOn: http://10.0.2.2:8081
+
+- assertVisible: 'Runtime version: exposdk:52.0.0'
+
+- tapOn:
+    point: 92%,42%
+
+- assertVisible: Sign Up
+
+- longPressOn: Sign Up
+
+- assertVisible: , Email
+- tapOn: , Email
+
+- assertVisible: Enter your email
+- tapOn: Enter your email
+- inputText: mitchelle+4@bridgelabs.design
+- assertVisible:
+    text: Sign Up
+    index: 1
+- tapOn:
+    text: Sign Up
+    index: 1
+- tapOn:
+    text: Sign Up
+    index: 1
+#Verify OPT sent via Email
+
+# # Give you time to manually enter the OTP
+# - extendedWaitUntil:
+#     visible:
+#       text: 'Please enter the verification code sent to mitchelle+4@bridgelabs.design.'
+#     timeout: 120000 # Wait for up to 2 minutes for manual OTP entry
+
+# - assertVisible:
+#     id: verifyOTPBtn
+# - tapOn:
+#     id: verifyOTPBtn

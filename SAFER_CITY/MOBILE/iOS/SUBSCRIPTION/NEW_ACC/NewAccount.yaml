@@ -1,0 +1,72 @@
+appId: cert.com.safercity.safercitymobileapp.dev
+---
+- assertVisible: First Name
+- tapOn: First Name
+- eraseText #
+- inputText: HelloM
+- assertVisible: Last Name
+- tapOn: Last Name
+- eraseText #
+- inputText: WorldM
+- assertVisible: Email
+- tapOn: Email
+- eraseText #
+- eraseText #
+- inputText: mitchelle+4@bridgelabs.design
+# - assertVisible: Gender 
+# - tapOn: Gender 
+# - tapOn: Gender 
+# - assertVisible: Select Gender Male Female Won't specify
+# - assertVisible: Female
+# - tapOn: Female
+- assertVisible: Female 
+- tapOn: Female 
+- tapOn: Female 
+- assertVisible: Select Gender
+- assertVisible: Female
+- tapOn: Female
+
+# - assertVisible: Select date of birth 
+# - tapOn: Select date of birth 
+# - assertVisible: 2025-02-05 
+# - tapOn: 2025-02-05 
+
+# - assertVisible:
+#     id: dateTimePicker
+
+# - assertVisible: '5'
+# - scrollUntilVisible:
+#     element:
+#       text: '16'
+
+# - tapOn: '16'
+
+# - scrollUntilVisible:
+#     element:
+#       text: February
+# - tapOn: February
+
+# - scrollUntilVisible:
+#     element:
+#       text: 200
+# - tapOn: 200
+
+# - assertVisible: Ok
+# - tapOn: Ok
+# - tapOn: Ok
+# - assertVisible: 16
+
+# - assertVisible: February
+# - tapOn: February
+# - assertVisible: 2000
+# - tapOn: 2000
+# - assertVisible: Ok
+# - tapOn: Ok
+# - tapOn: Ok
+- assertVisible: Password
+- tapOn: Password
+- inputText: Hello@World1
+- scroll
+# - assertVisible: Get Started
+# - tapOn: Get Started
+# - tapOn: Get Started
