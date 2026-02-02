@@ -1,9 +1,30 @@
 appId: com.safercity.SaferCitymobileapp.dev
 ---
-- assertVisible: Track me
-- tapOn: Track me
-- scroll
-- assertVisible: Family Group Family Plan Avatar Avatar 2 Members
-- tapOn: Family Group Family Plan Avatar Avatar 2 Members
-- scroll
-# Call Out
+- assertVisible: Family Group, Family Plan, Avatar, Avatar, 2 Members
+- tapOn: Family Group, Family Plan, Avatar, Avatar, 2 Members
+- swipe:
+    from:
+      text: Bottom sheet handle
+    direction: UP
+
+- assertVisible: "Avatar, Kwenzi Bhekiswayo, Near: 155 West Street, Sandown, Sandton, Gauteng, 2196, South Africa, Last Updated: 9 Sep at 14:23"
+- assertVisible:
+    text: 
+    index: 1
+
+- tapOn:
+    text: 
+    index: -1
+- assertVisible: , Create call-out
+- tapOn: , Create call-out
+- assertVisible: Create Call-out
+
+- assertVisible: Alert Type
+- assertVisible: Select emergency
+- tapOn: Select emergency
+
+- assertVisible: Security
+- tapOn: Security
+
+- assertVisible: , Create Call-Out
+- tapOn: , Create Call-Out

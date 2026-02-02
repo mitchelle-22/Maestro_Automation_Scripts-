@@ -1,0 +1,10 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- assertVisible: Join Group
+- tapOn: , Join Group
+- assertVisible: Group code
+- tapOn: Group code
+- inputText: '50060010024'
+
+- assertVisible: Join Now
+- tapOn: Join Now

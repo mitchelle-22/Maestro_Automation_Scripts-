@@ -2,8 +2,18 @@ appId: com.safercity.SaferCitymobileapp.dev
 ---
 - assertVisible: Track me
 - tapOn: Track me
-- assertVisible: Sharing your location You are not sharing your location
-- longPressOn: 0
+- assertVisible: Sharing your location
+
+- tapOn:
+    point: 84%,17%
+- tapOn:
+    point: 84%,17%
+
+
+    
+
+- assertVisible: Share live location
+
 - assertVisible: 10 minutes
 - tapOn: 10 minutes
 - assertVisible: Share now

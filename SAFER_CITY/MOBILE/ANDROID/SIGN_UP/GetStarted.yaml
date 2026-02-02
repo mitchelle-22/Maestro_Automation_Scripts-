@@ -1,0 +1,23 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- assertVisible: Sign Up
+
+- assertVisible: First Name
+- tapOn: First Name
+- inputText: Hello
+
+- assertVisible: Last Name
+- tapOn: Last Name
+- inputText: World
+
+- assertVisible: Enter phone number
+- tapOn: Enter phone number
+- inputText: '0864325678'
+
+- assertVisible: Password
+- tapOn: Password
+- inputText: 1Hello@World2
+
+- assertVisible: Get Started
+- tapOn: Get Started
+- tapOn: Get Started

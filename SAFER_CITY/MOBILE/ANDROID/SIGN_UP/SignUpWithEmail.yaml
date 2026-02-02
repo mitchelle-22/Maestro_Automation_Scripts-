@@ -1,14 +1,14 @@
 appId: com.safercity.SaferCitymobileapp.dev
 ---
-- launchApp:
-    clearState: true
+# - launchApp:
+#     clearState: true
 
-- tapOn: http://10.0.2.2:8081
+# - tapOn: http://10.0.2.2:8081
 
-- assertVisible: 'Runtime version: exposdk:52.0.0'
+# - assertVisible: 'Runtime version: exposdk:52.0.0'
 
-- tapOn:
-    point: 92%,42%
+# - tapOn:
+#     point: 92%,42%
 
 - assertVisible: Sign Up
 
@@ -19,7 +19,8 @@ appId: com.safercity.SaferCitymobileapp.dev
 
 - assertVisible: Enter your email
 - tapOn: Enter your email
-- inputText: mitchelle+4@bridgelabs.design
+- eraseText #
+- inputText: mitchelle+44@bridgelabs.design
 - assertVisible:
     text: Sign Up
     index: 1
@@ -29,15 +30,28 @@ appId: com.safercity.SaferCitymobileapp.dev
 - tapOn:
     text: Sign Up
     index: 1
-#Verify OPT sent via Email
 
-# # Give you time to manually enter the OTP
-# - extendedWaitUntil:
-#     visible:
-#       text: 'Please enter the verification code sent to mitchelle+4@bridgelabs.design.'
-#     timeout: 120000 # Wait for up to 2 minutes for manual OTP entry
+- assertVisible: Sign Up
+- tapOn:
+    point: 10%,55%
 
-# - assertVisible:
-#     id: verifyOTPBtn
-# - tapOn:
-#     id: verifyOTPBtn
+# Wait for OTP input field to be visible
+- extendedWaitUntil:
+    visible: 'Please enter the verification code sent to {email}.'
+    timeout: 120000 # Wait for up to 2 minutes
+
+# Start a timer to detect when the user has stopped typing
+- repeat:
+    while:
+      visible: 'Enter the OTP' # Adjust this to match the actual identifier
+    commands:
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: 'Enter the OTP'
+          timeout: 5000 # Wait for 5 seconds
+      - assertVisible: 'Enter the OTP' # Ensure the OTP input is still visible
+
+# After the user has stopped typing, tap the "Verify" button
+- assertVisible: Verify
+- tapOn: Verify
+- tapOn: Verify

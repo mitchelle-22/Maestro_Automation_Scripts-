@@ -1,14 +1,14 @@
 appId: com.safercity.SaferCitymobileapp.dev
 ---
-- launchApp:
-    clearState: true
+# - launchApp:
+#     clearState: true
 
-- tapOn: http://10.0.2.2:8081
+# - tapOn: http://10.0.2.2:8081
 
-- assertVisible: 'Runtime version: exposdk:52.0.0'
+# - assertVisible: 'Runtime version: exposdk:52.0.0'
 
-- tapOn:
-    point: 92%,42%
+# - tapOn:
+#     point: 92%,42%
 
 - assertVisible: Login
 
@@ -40,4 +40,3 @@ appId: com.safercity.SaferCitymobileapp.dev
 
 - tapOn:
     id: loginBtn
-

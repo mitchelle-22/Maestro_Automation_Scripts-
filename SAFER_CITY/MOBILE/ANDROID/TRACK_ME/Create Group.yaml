@@ -1,0 +1,16 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+- assertVisible: + Create Group
+- tapOn: + Create Group
+
+- assertVisible: + Create New Group
+- assertVisible: Group name
+- tapOn: Group name
+- inputText: Hello World
+
+- assertVisible: Create
+- tapOn: Create
+
+- assertVisible: Success
+- assertVisible: OK
+- tapOn: OK

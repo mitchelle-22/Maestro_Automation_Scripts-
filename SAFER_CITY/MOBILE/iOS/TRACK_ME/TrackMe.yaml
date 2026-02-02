@@ -5,6 +5,8 @@ appId: cert.com.safercity.safercitymobileapp.dev
 - assertVisible: Sharing your location You are not sharing your location
 - longPressOn: 0
 - assertVisible: 10 minutes
-- tapOn: 10 minutes
+- doubleTapOn:
+    point: 0%,6%
+
 - assertVisible: Share now
 - tapOn: Share now

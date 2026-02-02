@@ -1,16 +1,11 @@
 appId: com.safercity.SaferCitymobileapp.dev
 ---
-- assertVisible: Profile, tab, 5 of 5
-- tapOn: Profile, tab, 5 of 5
-- tapOn: Profile, tab, 5 of 5
-- assertVisible: Logout 
-- tapOn: Logout 
-- assertVisible:
-    text: Bottom Sheet
-    index: 1
+- assertVisible: , Profile
+- tapOn: , Profile
 
-- assertVisible: "This will log you out of your account"
+- assertVisible: Logout, 
+- tapOn: Logout, 
 
+- assertVisible: Are you sure you want to log out?
 - assertVisible: Confirm
 - tapOn: Confirm
-- tapOn: My text

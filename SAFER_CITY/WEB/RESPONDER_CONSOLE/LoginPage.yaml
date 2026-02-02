@@ -1,0 +1,41 @@
+appId: https://staging--responder-company-portal.netlify.app/
+env:
+  MAILOSAUR_API_KEY: 'MVJ50ZlZDlbdkfYJE6u1JgGS2eC6PGMn'
+  MAILOSAUR_SERVER_ID: 'gl71mcuw'
+---
+- launchApp:
+    clearState: true
+
+- assertVisible: 'Enter your email'
+- tapOn: 'Enter your email'
+- inputText: mitchelle@bridgelabs.design
+
+- assertVisible: 'Enter your password'
+- tapOn: 'Enter your password'
+- inputText: Michelle@1234
+
+- assertVisible: 'Login'
+- tapOn: 'Login'
+
+# Wait for the OTP page to appear
+- assertVisible: 'Check Messages for OTP'
+
+# Fetch the OTP from Mailosaur
+- runScript:
+    file: 'scripts/fetch_otp.js'
+    env:
+      MAILOSAUR_API_KEY: $MVJ50ZlZDlbdkfYJE6u1JgGS2eC6PGMn
+      MAILOSAUR_SERVER_ID: $gl71mcuw
+
+# Wait for the OTP input field to be visible
+- extendedWaitUntil:
+    visible: 'Enter the OTP sent to your phone number'
+    timeout: 120000 #
+
+# Wait until the "Continue" button is visible
+- extendedWaitUntil:
+    visible: 'Continue' # Wait until the "Continue" button is visible
+    timeout: 120000 # Wait for up to 2 minutes
+
+# Click the "Continue" button after entering the OTP
+- tapOn: 'Continue'
