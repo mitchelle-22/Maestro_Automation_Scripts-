@@ -16,11 +16,12 @@ appId: com.safercity.SaferCitymobileapp.dev
 - assertVisible: Enter Device ID
 - tapOn: Enter Device ID
 - inputText: Hello World
-- assertVisible: Select Device Type
-- tapOn: Select Device Type
-- inputText: Hello World
 - assertVisible: Enter Phone Number
 - tapOn: Enter Phone Number
 - inputText: '0791234567'
 - assertVisible: Link Button
 - tapOn: Link Button
+
+- assertVisible: OK
+- tapOn: OK
+
