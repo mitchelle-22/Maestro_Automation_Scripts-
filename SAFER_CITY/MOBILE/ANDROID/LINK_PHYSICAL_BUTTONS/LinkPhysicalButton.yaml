@@ -1,0 +1,26 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+# - launchApp:
+#     clearState: true
+
+- assertVisible: , Profile
+- tapOn: 
+- assertVisible: Link physical panic button, 
+- tapOn: Link physical panic button, 
+- assertVisible: + Add New Device
+- tapOn: + Add New Device
+- assertVisible: Your Linked Physical Buttons
+- assertVisible: Enter Device Name
+- tapOn: Enter Device Name
+- inputText: Hello World
+- assertVisible: Enter Device ID
+- tapOn: Enter Device ID
+- inputText: Hello World
+- assertVisible: Select Device Type
+- tapOn: Select Device Type
+- inputText: Hello World
+- assertVisible: Enter Phone Number
+- tapOn: Enter Phone Number
+- inputText: '0791234567'
+- assertVisible: Link Button
+- tapOn: Link Button
