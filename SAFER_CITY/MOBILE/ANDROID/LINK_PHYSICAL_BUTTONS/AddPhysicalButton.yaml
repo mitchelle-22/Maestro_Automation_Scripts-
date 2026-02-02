@@ -24,4 +24,3 @@ appId: com.safercity.SaferCitymobileapp.dev
 
 - assertVisible: OK
 - tapOn: OK
-

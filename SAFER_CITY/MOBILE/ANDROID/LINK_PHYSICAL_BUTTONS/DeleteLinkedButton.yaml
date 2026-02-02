@@ -1,0 +1,13 @@
+appId: com.safercity.SaferCitymobileapp.dev
+---
+# - launchApp:
+#     clearState: true
+
+- assertVisible: Test
+- tapOn: Test
+- assertVisible: Delete Button
+- tapOn: Delete Button
+- assertVisible: Delink Device
+- tapOn: Delink Device
+- assertVisible: OK
+- tapOn: OK
